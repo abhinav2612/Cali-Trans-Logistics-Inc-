@@ -1,18 +1,29 @@
-const inputs = document.querySelectorAll(".input");
+var express = require("express"),
+    app = express(),
+    mongoose = require('mongoose'),
+   path = require('path');
+mongoose.connect("mongodb://localhost:27017/cali-trans", { useNewUrlParser: true, useUnifiedTopology: true }); 
 
-function focusFunc() {
-  let parent = this.parentNode;
-  parent.classList.add("focus");
-}
+app.use(express.static(__dirname + "/public"));
+app.set('views', path.join(__dirname, 'views'));
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
-function blurFunc() {
-  let parent = this.parentNode;
-  if (this.value == "") {
-    parent.classList.remove("focus");
-  }
-}
+app.get("/",function(req,res){
+    res.render("navbar.html")
+})
+app.get("/about",function(req,res){
+    res.render("about.html");
+})
+app.get("/footer",function(req,res){
+    res.render("footer.html");
+})
+app.get("/contact",function(req,res){
+    res.render("contact.html");
+})
+app.get("/workwithus",function(req,res){
+    res.render("workwithus.html");
+})
 
-inputs.forEach((input) => {
-  input.addEventListener("focus", focusFunc);
-  input.addEventListener("blur", blurFunc);
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT);
