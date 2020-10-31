@@ -7,8 +7,7 @@
 }
 .st {
 	width: 100%;
-	height: 100vh;
-	display: grid;
+	margin: 150px auto;
 	align-items: center;
 	background: #fff;
 	font-family: 'Josefin Sans', sans-serif;
@@ -16,7 +15,7 @@
 .contact-in {
 	width: 80%;
 	height: auto;
-	margin: auto;
+	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
 	padding: 10px;
