@@ -86,11 +86,11 @@
          <div class="form">
             <div class="inputfield">
                <label>First Name</label>
-               <input type="text" class="input test" name="FName" required>
+               <input type="text" class="input test" id="first" name="FName" required>
             </div>
             <div class="inputfield">
                <label>Last Name</label>
-               <input type="text" class="input" name="LName" required>
+               <input type="text" class="input" id="last" name="LName" required>
             </div>
 
 
@@ -108,7 +108,7 @@
 
             <div class="inputfield">
                <label>Date of Birth</label>
-               <input type="date" class="input" name="Dob" required>
+               <input type="date" class="input" id="Dob" name="Dob" required>
             </div>
             <div class="inputfield">
                <label>Date of Application</label>
@@ -786,7 +786,8 @@
             </div>
             <div class="inputfield">
                <label>Applicant Signature</label>
-               <input type="file" name="Sign" required>
+               <input type="file" name="Sign" id="photo" required>
+               <button onclick="upload()">Upload Image</button>
             </div>
             <div class="inputfield">
                <label>Date</label>
@@ -956,6 +957,8 @@
       <input type="text" class="doa" name="DOA">
       <input type="text" class="position" name="Position">
    </form> -->
+  
+</script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script>
 
@@ -983,6 +986,41 @@
          fetch(scriptURL, { method: "POST", body: new FormData(form) });
       });
    </script>
+
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  function upload(){
+      const ref = firebase.storage().ref();
+      const file = document.querySelector("#photo").files[0];
+      const name = document.querySelector("#first").value + " " + document.querySelector("#last").value + " " + document.querySelector("#Dob").value;
+      const metadata = {
+        contentType: file.type
+      };
+      const task = ref.child(name).put(file, metadata);
+      task
+         .then(snapshot => snapshot.ref.getDownloadURL())
+         .catch(console.error);
+  }
+</script>
 </body>
 
 </html>
