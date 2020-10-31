@@ -86,39 +86,41 @@
          <div class="form">
             <div class="inputfield">
                <label>First Name</label>
-               <input type="text" class="input test" name="FName">
+               <input type="text" class="input test" name="FName" required>
             </div>
             <div class="inputfield">
                <label>Last Name</label>
-               <input type="text" class="input" name="LName">
+               <input type="text" class="input" name="LName" required>
             </div>
 
 
             <div class="inputfield">
                <label>Email Address</label>
-               <input type="email" class="input" name="Email">
+               <input type="email" class="input" name="Email" required>
             </div>
             <div class="inputfield">
                <label>Phone Number</label>
-               <input type="tel" class="input" name="Phone">
+               <input type="tel" class="input" name="Phone" placeholder="123-45-678"
+                  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
             </div>
+
 
 
             <div class="inputfield">
                <label>Date of Birth</label>
-               <input type="date" class="input" name="Dob">
+               <input type="date" class="input" name="Dob" required>
             </div>
             <div class="inputfield">
                <label>Date of Application</label>
-               <input type="date" class="input" name="Doa">
+               <input type="date" class="input" name="Doa" required>
             </div>
             <div class="inputfield">
                <label>Position Applied For</label>
-               <input type="text" class="input" name="Position">
+               <input type="text" class="input" name="Position" required>
             </div>
             <div class="inputfield">
                <label>Date Available For Work</label>
-               <input type="date" class="input" name="Dafw">
+               <input type="date" class="input" name="Dafw" required>
             </div>
 
             <div class="inputfield terms">
@@ -143,23 +145,23 @@
             <div class="form">
                <div class="inputfield">
                   <label>Address</label>
-                  <textarea class="textarea" name="CurAdd"></textarea>
+                  <textarea class="textarea" name="CurAdd" required></textarea>
                </div>
                <div class="inputfield">
                   <label>City</label>
-                  <input type="text" class="input" name="CurCity">
+                  <input type="text" class="input" name="CurCity" required>
                </div>
                <div class="inputfield">
                   <label>State</label>
-                  <input type="text" class="input" name="CurState">
+                  <input type="text" class="input" name="CurState" required>
                </div>
                <div class="inputfield">
                   <label>Zip Code</label>
-                  <input type="number" class="input" name="CurZip">
+                  <input type="number" class="input" name="CurZip" required>
                </div>
                <div class="inputfield">
                   <label># Of Years At Address</label>
-                  <input type="number" class="input" name="CurYear">
+                  <input type="number" class="input" name="CurYear" required>
                </div>
             </div>
          </div>
@@ -171,23 +173,23 @@
             <div class="form">
                <div class="inputfield">
                   <label>Address</label>
-                  <textarea class="textarea" name="MailAdd"></textarea>
+                  <textarea class="textarea" name="MailAdd" required></textarea>
                </div>
                <div class="inputfield">
                   <label>City</label>
-                  <input type="text" class="input" name="MailCity">
+                  <input type="text" class="input" name="MailCity" required>
                </div>
                <div class="inputfield">
                   <label>State</label>
-                  <input type="text" class="input" name="MailState">
+                  <input type="text" class="input" name="MailState" required>
                </div>
                <div class="inputfield">
                   <label>Zip Code</label>
-                  <input type="number" class="input" name="MailZip">
+                  <input type="number" class="input" name="MailZip" required>
                </div>
                <div class="inputfield">
                   <label># Of Years At Address</label>
-                  <input type="number" class="input" name="MailYear">
+                  <input type="number" class="input" name="MailYear" required>
                </div>
 
             </div>
@@ -288,27 +290,27 @@
          <div class="form">
             <div class="inputfield">
                <label>State</label>
-               <input type="text" class="input" name="LState">
+               <input type="text" class="input" name="LState" required>
             </div>
             <div class="inputfield">
                <label>License #</label>
-               <input type="number" class="input" name="LNo">
+               <input type="number" class="input" name="LNo" required>
             </div>
 
 
             <div class="inputfield">
                <label>Type/Class</label>
-               <input type="text" class="input" name="LType">
+               <input type="text" class="input" name="LType" required>
             </div>
             <div class="inputfield">
                <label>Endorsements</label>
-               <input type="text" class="input" name="LEndor">
+               <input type="text" class="input" name="LEndor" required>
             </div>
 
 
             <div class="inputfield">
                <label>Expiration Date</label>
-               <input type="date" class="input" name="LExp">
+               <input type="date" class="input" name="LExp" required>
             </div>
 
 
@@ -335,19 +337,19 @@
             <div class="form">
                <div class="inputfield">
                   <label>Type Of Equipment (VAN, TANK, FLAT, ETC.)</label>
-                  <textarea class="textarea" name="ExpType"></textarea>
+                  <textarea class="textarea" name="ExpType" required></textarea>
                </div>
                <div class="inputfield">
                   <label>Date From</label>
-                  <input type="date" class="input" name="ExpFrom">
+                  <input type="date" class="input" name="ExpFrom" required>
                </div>
                <div class="inputfield">
                   <label>Date to</label>
-                  <input type="date" class="input" name="ExpTo">
+                  <input type="date" class="input" name="ExpTo" required>
                </div>
                <div class="inputfield">
                   <label>Approx # Of Miles (TOTAL) </label>
-                  <input type="number" class="input" name="ExpMiles">
+                  <input type="number" class="input" name="ExpMiles" required>
                </div>
             </div>
          </div>
@@ -360,108 +362,109 @@
          <div class="form">
             <div class="inputfield terms">
                <label class="check">
-                  <input type="checkbox">
+                  <input type="checkbox" class="accident">
                   <span class="checkmark"></span>
                </label>
                <p>CHECK THIS BOX IF NONE: </p>
             </div>
          </div>
-         <div class="wrapper">
-            <div class="title">
-               ACCIDENT RECORD #1
+         <div class="accident-container">
+            <div class="wrapper">
+               <div class="title">
+                  ACCIDENT RECORD #1
+               </div>
+               <div class="form">
+                  <div class="inputfield">
+                     <label>Date (List Most Recent First):</label>
+                     <input type="date" class="input" name="Ac1Date">
+                  </div>
+                  <div class="inputfield">
+                     <label>Nature Of Accident (Head-On, Rear-End, Upset, etc..)</label>
+                     <input type="text" class="input" name="Ac1Nature">
+                  </div>
+
+
+                  <div class="inputfield">
+                     <label>#Fatalitie :</label>
+                     <input type="number" class="input" name="Ac1Fatal">
+                  </div>
+                  <div class="inputfield">
+                     <label>#Injuries</label>
+                     <input type="number" class="input" name="Ac1Injuries">
+                  </div>
+
+
+                  <div class="inputfield">
+                     <label>Chemical Spills (Y/N)</label>
+                     <input type="text" class="input" name="Ac1CS">
+                  </div>
+               </div>
             </div>
-            <div class="form">
-               <div class="inputfield">
-                  <label>Date (List Most Recent First):</label>
-                  <input type="date" class="input" name="Ac1Date">
+
+            <div class="wrapper">
+               <div class="title">
+                  ACCIDENT RECORD #2
                </div>
-               <div class="inputfield">
-                  <label>Nature Of Accident (Head-On, Rear-End, Upset, etc..)</label>
-                  <input type="text" class="input" name="Ac1Nature">
-               </div>
+               <div class="form">
+                  <div class="inputfield">
+                     <label>Date (List Most Recent First):</label>
+                     <input type="date" class="input" name="Ac2Date">
+                  </div>
+                  <div class="inputfield">
+                     <label>Nature Of Accident (Head-On, Rear-End, Upset, etc..)</label>
+                     <input type="text" class="input" name="Ac2Nature">
+                  </div>
 
 
-               <div class="inputfield">
-                  <label>#Fatalitie :</label>
-                  <input type="number" class="input" name="Ac1Fatal">
-               </div>
-               <div class="inputfield">
-                  <label>#Injuries</label>
-                  <input type="number" class="input" name="Ac1Injuries">
-               </div>
+                  <div class="inputfield">
+                     <label>#Fatalitie :</label>
+                     <input type="number" class="input" name="Ac2Fatal">
+                  </div>
+                  <div class="inputfield">
+                     <label>#Injuries</label>
+                     <input type="number" class="input" name="Ac2Injuries">
+                  </div>
 
 
-               <div class="inputfield">
-                  <label>Chemical Spills (Y/N)</label>
-                  <input type="text" class="input" name="Ac1CS">
+                  <div class="inputfield">
+                     <label>Chemical Spills (Y/N)</label>
+                     <input type="text" class="input" name="Ac2CS">
+                  </div>
+               </div>
+            </div>
+
+            <div class="wrapper">
+               <div class="title">
+                  ACCIDENT RECORD #3
+               </div>
+               <div class="form">
+                  <div class="inputfield">
+                     <label>Date (List Most Recent First):</label>
+                     <input type="date" class="input" name="Ac3Date">
+                  </div>
+                  <div class="inputfield">
+                     <label>Nature Of Accident (Head-On, Rear-End, Upset, etc..)</label>
+                     <input type="text" class="input" name="Ac3Nature">
+                  </div>
+
+
+                  <div class="inputfield">
+                     <label>#Fatalitie :</label>
+                     <input type="number" class="input" name="Ac3Fatal">
+                  </div>
+                  <div class="inputfield">
+                     <label>#Injuries</label>
+                     <input type="number" class="input" name="Ac3Injuries">
+                  </div>
+
+
+                  <div class="inputfield">
+                     <label>Chemical Spills (Y/N)</label>
+                     <input type="text" class="input" name="Ac3CS">
+                  </div>
                </div>
             </div>
          </div>
-
-         <div class="wrapper">
-            <div class="title">
-               ACCIDENT RECORD #2
-            </div>
-            <div class="form">
-               <div class="inputfield">
-                  <label>Date (List Most Recent First):</label>
-                  <input type="date" class="input" name="Ac2Date">
-               </div>
-               <div class="inputfield">
-                  <label>Nature Of Accident (Head-On, Rear-End, Upset, etc..)</label>
-                  <input type="text" class="input" name="Ac2Nature">
-               </div>
-
-
-               <div class="inputfield">
-                  <label>#Fatalitie :</label>
-                  <input type="number" class="input" name="Ac2Fatal">
-               </div>
-               <div class="inputfield">
-                  <label>#Injuries</label>
-                  <input type="number" class="input" name="Ac2Injuries">
-               </div>
-
-
-               <div class="inputfield">
-                  <label>Chemical Spills (Y/N)</label>
-                  <input type="text" class="input" name="Ac2CS">
-               </div>
-            </div>
-         </div>
-
-         <div class="wrapper">
-            <div class="title">
-               ACCIDENT RECORD #3
-            </div>
-            <div class="form">
-               <div class="inputfield">
-                  <label>Date (List Most Recent First):</label>
-                  <input type="date" class="input" name="Ac3Date">
-               </div>
-               <div class="inputfield">
-                  <label>Nature Of Accident (Head-On, Rear-End, Upset, etc..)</label>
-                  <input type="text" class="input" name="Ac3Nature">
-               </div>
-
-
-               <div class="inputfield">
-                  <label>#Fatalitie :</label>
-                  <input type="number" class="input" name="Ac3Fatal">
-               </div>
-               <div class="inputfield">
-                  <label>#Injuries</label>
-                  <input type="number" class="input" name="Ac3Injuries">
-               </div>
-
-
-               <div class="inputfield">
-                  <label>Chemical Spills (Y/N)</label>
-                  <input type="text" class="input" name="Ac3CS">
-               </div>
-            </div>
-         </div>
-
 
       </div>
 
@@ -494,37 +497,38 @@
             <div class="form">
                <div class="inputfield">
                   <label>Full Name</label>
-                  <input type="text" class="input" name="Em1Name">
+                  <input type="text" class="input" name="Em1Name" required>
                </div>
                <div class="inputfield">
                   <label>Phone</label>
-                  <input type="tel" class="input" name="Em1Phone">
+                  <input type="tel" class="input" name="Em1Phone" placeholder="123-45-678"
+                     pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
                </div>
 
 
                <div class="inputfield">
                   <label>Address</label>
-                  <textarea class="textarea" name="Em1Add"></textarea>
+                  <textarea class="textarea" name="Em1Add" required></textarea>
                </div>
                <div class="inputfield">
                   <label>Position Held</label>
-                  <input type="text" class="input" name="Em1Position">
+                  <input type="text" class="input" name="Em1Position" required>
                </div>
                <div class="inputfield">
                   <label>Date From Month/Year</label>
-                  <input type="date" class="input" name="Em1From">
+                  <input type="date" class="input" name="Em1From" required>
                </div>
                <div class="inputfield">
                   <label>Date To Month/Year</label>
-                  <input type="date" class="input" name="Em1To">
+                  <input type="date" class="input" name="Em1To" required>
                </div>
                <div class="inputfield">
                   <label>Reason For Leaving</label>
-                  <input type="text" class="input" name="Em1Reason">
+                  <input type="text" class="input" name="Em1Reason" required>
                </div>
                <div class="inputfield">
                   <label>Salary</label>
-                  <input type="number" class="input" name="Em1Salary">
+                  <input type="number" class="input" name="Em1Salary" required>
                </div>
                <div class="inputfield">
                   <label>Explain Any Gaps In Employment (Include Month/Year & Reason)</label>
@@ -544,7 +548,9 @@
                </div>
                <div class="inputfield">
                   <label>Phone</label>
-                  <input type="tel" class="input" name="Em2Phone">
+                  <input type="tel" class="input" name="Em2Phone" placeholder="123-45-678"
+                     pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+
                </div>
 
 
@@ -591,7 +597,8 @@
                </div>
                <div class="inputfield">
                   <label>Phone</label>
-                  <input type="tel" class="input" name="Em3Phone">
+                  <input type="tel" class="input" name="Em3Phone" placeholder="123-45-678"
+                     pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                </div>
 
 
@@ -641,23 +648,23 @@
             <div class="form">
                <div class="inputfield">
                   <label>Name & Location</label>
-                  <textarea class="textarea" name="EduHSName"></textarea>
+                  <textarea class="textarea" name="EduHSName" required></textarea>
                </div>
                <div class="inputfield">
                   <label>Course Of Study</label>
-                  <input type="text" class="input" name="EduHSCourse">
+                  <input type="text" class="input" name="EduHSCourse" required>
                </div>
                <div class="inputfield">
                   <label>Years Completed</label>
-                  <input type="number" class="input" name="EduHSYear">
+                  <input type="number" class="input" name="EduHSYear" required>
                </div>
                <div class="inputfield">
                   <label>Details</label>
-                  <input type="text" class="input" name="EduHSDetail">
+                  <input type="text" class="input" name="EduHSDetail" required>
                </div>
                <div class="inputfield terms">
                   <label class="check">
-                     <input type="checkbox" name="EduHSGrad">
+                     <input type="checkbox" name="EduHSGrad" required>
                      <span class="checkmark"></span>
                   </label>
                   <p>Graduate </p>
@@ -779,15 +786,15 @@
             </div>
             <div class="inputfield">
                <label>Applicant Signature</label>
-               <input type="file" name="Sign">
+               <input type="file" name="Sign" required>
             </div>
             <div class="inputfield">
                <label>Date</label>
-               <input type="date" class="input" name="SubDate">
+               <input type="date" class="input" name="SubDate" required>
             </div>
             <div class="inputfield">
                <label>Applicant Name</label>
-               <input type="text" class="input" name="SubName">
+               <input type="text" class="input" name="SubName" required>
             </div>
          </div>
       </div>
@@ -857,6 +864,19 @@
    </div>
    <!--footer-finish-->
    <br /><br />
+
+   <script>
+      var check = document.getElementsByClassName("accident")[0];
+      check.addEventListener("click", function () {
+         if (check.checked) {
+            console.log("hii");
+            document.getElementsByClassName("accident-container")[0].style.display = "none";
+         }
+         else
+            document.getElementsByClassName("accident-container")[0].style.display = "block";
+      })
+
+   </script>
    <!--slider-js--->
    <script>
       let slide = document.querySelectorAll('.slide');
@@ -938,6 +958,7 @@
    </form> -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script>
+
       const scriptURL =
          "https://script.google.com/macros/s/AKfycbxDivVF9DsbsW2DlelzamXwuY1CoNr8KVmKLE7Wn_Or1e-H5cih/exec";
       const form = document.forms["contact-form"];
