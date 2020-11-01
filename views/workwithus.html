@@ -100,8 +100,8 @@
             </div>
             <div class="inputfield">
                <label>Phone Number</label>
-               <input type="tel" class="input" name="Phone" placeholder="123-45-678"
-                  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+               <input type="tel" class="input" name="Phone" placeholder="123-456-7890"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
             </div>
 
 
@@ -501,8 +501,8 @@
                </div>
                <div class="inputfield">
                   <label>Phone</label>
-                  <input type="tel" class="input" name="Em1Phone" placeholder="123-45-678"
-                     pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                  <input type="tel" class="input" name="Em1Phone" placeholder="123-456-7890"
+                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                </div>
 
 
@@ -548,8 +548,8 @@
                </div>
                <div class="inputfield">
                   <label>Phone</label>
-                  <input type="tel" class="input" name="Em2Phone" placeholder="123-45-678"
-                     pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                  <input type="tel" class="input" name="Em2Phone" placeholder="123-456-7890"
+                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
 
                </div>
 
@@ -597,8 +597,8 @@
                </div>
                <div class="inputfield">
                   <label>Phone</label>
-                  <input type="tel" class="input" name="Em3Phone" placeholder="123-45-678"
-                     pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                  <input type="tel" class="input" name="Em3Phone" placeholder="123-456-7890"
+                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                </div>
 
 
@@ -957,8 +957,8 @@
       <input type="text" class="doa" name="DOA">
       <input type="text" class="position" name="Position">
    </form> -->
-  
-</script>
+
+   </script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script>
 
@@ -989,38 +989,40 @@
 
 
    <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+   <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "",
-    authDomain: "",
-    databaseURL: "",
-    projectId: "",
-    storageBucket: "",
-    messagingSenderId: "",
-    appId: ""
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  function upload(){
-      const ref = firebase.storage().ref();
-      const file = document.querySelector("#photo").files[0];
-      const name = document.querySelector("#first").value + " " + document.querySelector("#last").value + " " + document.querySelector("#Dob").value;
-      const metadata = {
-        contentType: file.type
+   <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+         apiKey: "AIzaSyCmks2uC3iDp9pTDKEvN3QOccV3_L6alBc",
+         authDomain: "cali-trans.firebaseapp.com",
+         databaseURL: "https://cali-trans.firebaseio.com",
+         projectId: "cali-trans",
+         storageBucket: "cali-trans.appspot.com",
+         messagingSenderId: "595937507713",
+         appId: "1:595937507713:web:945fcbfc46d8f180e21080",
+         measurementId: "G-DVDGMHW28S"
       };
-      const task = ref.child(name).put(file, metadata);
-      task
-         .then(snapshot => snapshot.ref.getDownloadURL())
-         .catch(console.error);
-  }
-</script>
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      function upload() {
+         const ref = firebase.storage().ref();
+         const file = document.querySelector("#photo").files[0];
+         const name = document.querySelector("#first").value + "_" + document.querySelector("#last").value + "_" + document.querySelector("#Dob").value;
+         const metadata = {
+            contentType: file.type
+         };
+         const task = ref.child(name).put(file, metadata);
+         task
+            .then(snapshot => snapshot.ref.getDownloadURL())
+            .catch(console.error);
+      }
+   </script>
 </body>
 
 </html>
