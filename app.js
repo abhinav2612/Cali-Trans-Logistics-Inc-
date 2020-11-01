@@ -1,9 +1,8 @@
 var express = require("express"),
     app = express(),
-    mongoose = require('mongoose'),
     path = require('path');
     
-mongoose.connect("mongodb://localhost:27017/cali-trans", { useNewUrlParser: true, useUnifiedTopology: true }); 
+
 
 app.use(express.static(__dirname + "/public"));
 app.set('views', path.join(__dirname, 'views'));
